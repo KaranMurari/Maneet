@@ -3,6 +3,7 @@ import HeroSection from '@/components/HeroSection';
 import ServicesPreview from '@/components/ServicesPreview';
 import AboutPreview from '@/components/AboutPreview';
 import ReviewsSection from '@/components/ReviewsSection';
+import ContactForm from '@/components/ContactForm';
 import ContactPreview from '@/components/ContactPreview';
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
       <ServicesPreview />
       <AboutPreview />
       <ReviewsSection />
+      <ContactForm />
       <ContactPreview />
     </Layout>
   );
