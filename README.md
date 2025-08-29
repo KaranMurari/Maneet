@@ -45,8 +45,8 @@ Make sure you have Node.js (version 18 or higher) and npm installed.
 2. Clone the Repository
 Bash
 
-git clone https://github.com/your-username/your-repository-name.git
-cd your-repository-name
+git clone https://github.com/KaranMurari/Maneet.git
+cd Maneet
 3. Install Dependencies
 Bash
 
@@ -60,7 +60,7 @@ Copy the contents of .env.example (if you have one) or add the following variabl
 
 Code snippet
 
-VITE_SUPABASE_URL="YOUR_SUPABASE_PROJECT_URL"
+VITE_SUPABASE_URL="https://supabase.com/dashboard/project/enlarymzxugefkzymfnr"
 VITE_SUPABASE_ANON_KEY="YOUR_SUPABASE_ANON_KEY"
 You can get these keys from your Supabase project's Settings > API page.
 
