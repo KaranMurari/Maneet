@@ -31,6 +31,18 @@ const Footer = () => {
             <p className="text-sm text-gray-400">
               © {currentYear} Maneet Sharma Photography. All rights reserved.
             </p>
+            <p className="text-sm text-gray-400">
+  Designed by{" "}
+  <a
+    href="https://karanmurari.online"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-[#d4af37] hover:underline"
+  >
+    Karan Murari
+  </a>
+</p>
+
           </div>
 
           {/* Quick Links */}
