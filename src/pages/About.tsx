@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Award, Camera, Heart, Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import photographerPortrait from '@/assets/photographer-portrait.jpg';
+import photographerPortrait from '@/assets/photographer-about.jpg';
 
 const About = () => {
   const achievements = [
