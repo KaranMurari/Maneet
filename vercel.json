@@ -1,7 +1,14 @@
 {
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "file",
+          "value": ":path",
+          "missing": true
+        }
+      ],
       "destination": "/index.html"
     }
   ]
