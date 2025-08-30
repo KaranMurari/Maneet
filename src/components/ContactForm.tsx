@@ -56,59 +56,7 @@ Please get back to me. Thank you!`;
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          {/* Contact Information */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="space-y-8"
-          >
-
-            <div className="space-y-6">
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 rounded-full luxury-gradient flex items-center justify-center flex-shrink-0">
-                  <Phone className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <p className="font-semibold text-foreground">Call Us</p>
-                  <p className="text-muted-foreground">+91 7248833774</p>
-                </div>
-              </div>
-
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 rounded-full luxury-gradient flex items-center justify-center flex-shrink-0">
-                  <Mail className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <p className="font-semibold text-foreground">Email Us</p>
-                  <p className="text-muted-foreground">Maneetography@gmail.com</p>
-                </div>
-              </div>
-
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 rounded-full luxury-gradient flex items-center justify-center flex-shrink-0">
-                  <MessageCircle className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <p className="font-semibold text-foreground">WhatsApp</p>
-                  <p className="text-muted-foreground">Quick response guaranteed</p>
-                </div>
-              </div>
-            </div>
-
-            <Button 
-              variant="outline" 
-              size="lg" 
-              className="w-full sm:w-auto"
-              onClick={() => window.open('https://wa.me/917248833774', '_blank')}
-            >
-              <MessageCircle className="w-5 h-5 mr-2" />
-              Chat on WhatsApp
-            </Button>
-          </motion.div>
-
+        <div className="max-w-2xl mx-auto">
           {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
