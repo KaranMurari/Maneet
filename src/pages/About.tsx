@@ -9,7 +9,7 @@ const About = () => {
   const achievements = [
     {
       icon: Camera,
-      title: '5+ Years Experience',
+      title: '10+ Years Experience',
       description: 'Professional photography across various specialties'
     },
     {
