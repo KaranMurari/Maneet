@@ -7,7 +7,7 @@ const ReviewsSection = () => {
     {
       id: 1,
       text: "Maneet captured our wedding day perfectly! Every moment was beautifully documented, and the photos exceeded our expectations. Highly recommended!",
-      name: "Priya & Rohan",
+      name: "Muskan & Mayank ",
       event: "Wedding",
       rating: 5,
     },
@@ -28,7 +28,7 @@ const ReviewsSection = () => {
     {
       id: 4,
       text: "Amazing work on our destination wedding! The photos tell our love story beautifully. Worth every penny and more!",
-      name: "Simran & Arjun",
+      name: "Saniya & Manu",
       event: "Destination Wedding",
       rating: 5,
     },
