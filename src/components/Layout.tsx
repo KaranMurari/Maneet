@@ -11,7 +11,7 @@ interface LayoutProps {
 
 const Layout = ({ 
   children, 
-  title = "Maneet Sharma Photography - Luxury Wedding & Event Photography in Uttarakhand",
+  title = "Maneet Sharma Photography - Luxury Wedding & Event Photographer in Uttarakhand",
   description = "Professional photographer in Uttarakhand specializing in wedding, pre-wedding, and event photography. Capturing timeless memories in Kashipur, Ramnagar, Jim Corbett, and beyond.",
   keywords = "Best Photographer in Uttarakhand, Wedding Photographer Kashipur, Pre Wedding Shoot Jim Corbett, Photographer Ramnagar, Event Photography Rudrapur, Professional Photographer Haridwar, Best Photography Haldwani"
 }: LayoutProps) => {
