@@ -14,8 +14,8 @@ const Footer = () => {
 
   return (
     <footer className="bg-elegant-gray text-white">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {/* Brand Section */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
@@ -50,7 +50,7 @@ const Footer = () => {
             <h3 className="font-heading text-lg font-semibold text-primary">
               Quick Links
             </h3>
-            <div className="grid grid-cols-2 gap-2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
               {quickLinks.map((link) => (
                 <Link
                   key={link.name}

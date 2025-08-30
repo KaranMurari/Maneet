@@ -36,15 +36,16 @@ const Navbar = () => {
           : 'bg-transparent'
       }`}
     >
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link 
             to="/" 
-            className="flex items-center space-x-2 font-heading text-xl font-bold text-foreground hover:text-primary transition-luxury"
+            className="flex items-center space-x-2 font-heading text-lg sm:text-xl font-bold text-foreground hover:text-primary transition-luxury"
           >
-            <Camera className="w-6 h-6 text-primary" />
-            <span>Maneet Sharma Photography</span>
+            <Camera className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
+            <span className="hidden sm:block">Maneet Sharma Photography</span>
+            <span className="block sm:hidden">MSP</span>
           </Link>
 
           {/* Desktop Navigation */}

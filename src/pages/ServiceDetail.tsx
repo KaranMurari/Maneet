@@ -463,7 +463,7 @@ From intimate family gatherings to large corporate events, we ensure that every 
                   <Button variant="hero" size="xl" asChild>
                     <Link to="/book-now">Book This Service</Link>
                   </Button>
-                  <Button variant="outline" size="xl" className="text-white border-white hover:bg-white hover:text-foreground">
+                  <Button variant="secondary" size="xl" asChild>
                     <Link to="/contact">Get Quote</Link>
                   </Button>
                 </div>

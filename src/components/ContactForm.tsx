@@ -65,15 +65,6 @@ Please get back to me. Thank you!`;
             viewport={{ once: true }}
             className="space-y-8"
           >
-            <div>
-              <h3 className="font-heading text-2xl font-bold text-foreground mb-6">
-                Let's Create Something Beautiful Together
-              </h3>
-              <p className="text-muted-foreground leading-relaxed mb-8">
-                Whether it's your wedding day, a special celebration, or a professional shoot, 
-                we're here to capture every precious moment with artistic excellence.
-              </p>
-            </div>
 
             <div className="space-y-6">
               <div className="flex items-center space-x-4">
