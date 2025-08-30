@@ -1,14 +1,7 @@
 {
   "rewrites": [
     {
-      "source": "/:path*",
-      "has": [
-        {
-          "type": "file",
-          "value": ":path",
-          "missing": true
-        }
-      ],
+      "source": "/((?!api/|_next/|sitemap.xml|images/|favicon.ico).*)",
       "destination": "/index.html"
     }
   ]
