@@ -20,7 +20,7 @@ const Footer = () => {
           <div className="space-y-4 order-3 md:order-1">
             <div className="flex items-center space-x-2">
               <img 
-                src="/lovable-uploads/c60838da-ad84-4612-9814-6825583612f3.png" 
+                src="/lovable-uploads/bbf7d3bc-54d4-43e8-bcae-6d24e0c8fcc4.png" 
                 alt="Maneet Sharma Photography Logo" 
                 className="w-6 h-6" 
               />

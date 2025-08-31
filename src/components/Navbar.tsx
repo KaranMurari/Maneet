@@ -44,7 +44,7 @@ const Navbar = () => {
             className="flex items-center space-x-2 font-heading text-lg sm:text-xl font-bold text-foreground hover:text-primary transition-luxury"
           >
             <img 
-              src="/lovable-uploads/c60838da-ad84-4612-9814-6825583612f3.png" 
+              src="/lovable-uploads/bbf7d3bc-54d4-43e8-bcae-6d24e0c8fcc4.png" 
               alt="Maneet Sharma Photography Logo" 
               className="w-5 h-5 sm:w-6 sm:h-6" 
             />
