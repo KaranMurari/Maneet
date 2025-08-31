@@ -13,7 +13,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-elegant-gray text-white">
+    <footer className="bg-elegant-gray text-white relative">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {/* Brand Section */}
@@ -28,23 +28,9 @@ const Footer = () => {
               Capturing timeless memories through luxury photography across Uttarakhand. 
               Specializing in weddings, pre-wedding shoots, and special events.
             </p>
-            <div className="flex justify-between items-center w-full">
-              <p className="text-sm text-gray-400">
-                © {currentYear} Maneet Sharma Photography. All rights reserved.
-              </p>
-              <p className="footer-credit text-sm text-gray-400">
-                Designed by{" "}
-                <a
-                  href="https://karanmurari.online"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#d4af37] hover:underline"
-                >
-                  Karan Murari
-                </a>
-              </p>
-            </div>
-
+            <p className="text-sm text-gray-400">
+              © {currentYear} Maneet Sharma Photography. All rights reserved.
+            </p>
           </div>
 
           {/* Quick Links */}
@@ -105,6 +91,21 @@ const Footer = () => {
               </a>
             </div>
           </div>
+        </div>
+        
+        {/* Credit positioned absolutely in bottom-right */}
+        <div className="footer-credit-container">
+          <p className="footer-credit text-sm text-gray-400">
+            Designed by{" "}
+            <a
+              href="https://karanmurari.online"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#d4af37] hover:underline"
+            >
+              Karan Murari
+            </a>
+          </p>
         </div>
       </div>
     </footer>
