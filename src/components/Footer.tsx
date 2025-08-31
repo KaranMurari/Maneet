@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Instagram, Phone, Mail, MessageCircle, Camera } from 'lucide-react';
+import { Instagram, Phone, Mail, MessageCircle } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -19,7 +19,11 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="space-y-4 order-3 md:order-1">
             <div className="flex items-center space-x-2">
-              <Camera className="w-6 h-6 text-primary" />
+              <img 
+                src="/lovable-uploads/c60838da-ad84-4612-9814-6825583612f3.png" 
+                alt="Maneet Sharma Photography Logo" 
+                className="w-6 h-6" 
+              />
               <span className="font-heading text-xl font-bold">
                 Maneet Sharma Photography
               </span>

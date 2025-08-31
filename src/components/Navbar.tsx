@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Menu, X, Camera } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Navbar = () => {
@@ -43,7 +43,11 @@ const Navbar = () => {
             to="/" 
             className="flex items-center space-x-2 font-heading text-lg sm:text-xl font-bold text-foreground hover:text-primary transition-luxury"
           >
-            <Camera className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
+            <img 
+              src="/lovable-uploads/c60838da-ad84-4612-9814-6825583612f3.png" 
+              alt="Maneet Sharma Photography Logo" 
+              className="w-5 h-5 sm:w-6 sm:h-6" 
+            />
             <span className="hidden sm:block">Maneet Sharma Photography</span>
             <span className="block sm:hidden">MSP</span>
           </Link>
