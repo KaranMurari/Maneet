@@ -28,20 +28,22 @@ const Footer = () => {
               Capturing timeless memories through luxury photography across Uttarakhand. 
               Specializing in weddings, pre-wedding shoots, and special events.
             </p>
-            <p className="text-sm text-gray-400">
-              © {currentYear} Maneet Sharma Photography. All rights reserved.
-            </p>
-            <p className="text-sm text-gray-400">
-  Designed by{" "}
-  <a
-    href="https://karanmurari.online"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="text-[#d4af37] hover:underline"
-  >
-    Karan Murari
-  </a>
-</p>
+            <div className="flex justify-between items-center w-full">
+              <p className="text-sm text-gray-400">
+                © {currentYear} Maneet Sharma Photography. All rights reserved.
+              </p>
+              <p className="footer-credit text-sm text-gray-400">
+                Designed by{" "}
+                <a
+                  href="https://karanmurari.online"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#d4af37] hover:underline"
+                >
+                  Karan Murari
+                </a>
+              </p>
+            </div>
 
           </div>
 

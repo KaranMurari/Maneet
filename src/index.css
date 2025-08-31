@@ -206,4 +206,13 @@ Luxury brand colors and sophisticated design tokens
       transform: scale(1);
     }
   }
+
+  .footer-credit {
+    text-align: right;
+    display: block;
+    width: 100%;
+    padding-right: 1rem;
+    margin-top: 0.5rem;
+    white-space: nowrap;
+  }
 }
