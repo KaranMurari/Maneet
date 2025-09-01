@@ -78,7 +78,7 @@ const Layout = ({
                 "name": "Uttarakhand"
               }
             ],
-            "priceRange": "$$"
+            "priceRange": "Contact for pricing"
           })}
         </script>
       </Helmet>

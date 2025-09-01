@@ -55,50 +55,12 @@ Looking forward to capturing your special moments!`;
     setFormData(prev => ({ ...prev, [field]: value }));
   };
 
-  const packages = [
-    {
-      title: 'Wedding Photography',
-      price: 'Starting ₹25,000',
-      features: [
-        'Full day coverage (8-10 hours)',
-        'Pre-wedding consultation',
-        'Candid & traditional shots',
-        '300+ edited high-res images',
-        'Online gallery delivery',
-        'Print-ready files'
-      ]
-    },
-    {
-      title: 'Pre-Wedding Shoot',
-      price: 'Starting ₹15,000',
-      features: [
-        '2-3 hour session',
-        'Multiple outfit changes',
-        'Location scouting included',
-        '100+ edited images',
-        'Social media ready files',
-        'Quick turnaround (3-5 days)'
-      ]
-    },
-    {
-      title: 'Event Photography',
-      price: 'Starting ₹8,000',
-      features: [
-        'Event coverage (4-6 hours)',
-        'Candid moments capture',
-        'Group photography',
-        '150+ edited images',
-        'Same day preview',
-        'Digital delivery'
-      ]
-    }
-  ];
 
   return (
     <Layout
       title="Book Your Photography Session - Maneet Sharma Photography"
-      description="Book your wedding photography, pre-wedding shoot, or event coverage with Maneet Sharma Photography. Easy booking process with custom packages available."
-      keywords="Book Photography Session, Wedding Photography Booking, Pre Wedding Shoot Booking, Event Photography Booking, Photography Packages Uttarakhand"
+      description="Book your wedding photography, pre-wedding shoot, or event coverage with Maneet Sharma Photography. Easy booking process with custom solutions available."
+      keywords="Book Photography Session, Wedding Photography Booking, Pre Wedding Shoot Booking, Event Photography Booking, Photography Services Uttarakhand"
     >
       <div className="pt-20">
         {/* Hero Section */}
@@ -121,54 +83,6 @@ Looking forward to capturing your special moments!`;
           </div>
         </section>
 
-        {/* Popular Packages */}
-        <section className="py-20 bg-muted/30">
-          <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-4">
-                Popular Packages
-              </h2>
-              <p className="text-xl text-muted-foreground">
-                Choose a package that fits your needs, or let's create a custom solution
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-              {packages.map((pkg, index) => (
-                <motion.div
-                  key={pkg.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <Card className="h-full border-0 elegant-shadow hover:shadow-lg transition-luxury">
-                    <CardHeader className="text-center">
-                      <CardTitle className="font-heading text-2xl text-foreground">
-                        {pkg.title}
-                      </CardTitle>
-                      <p className="text-2xl font-bold text-primary">{pkg.price}</p>
-                    </CardHeader>
-                    <CardContent className="space-y-4">
-                      {pkg.features.map((feature, i) => (
-                        <div key={i} className="flex items-center space-x-3">
-                          <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
-                          <span className="text-muted-foreground">{feature}</span>
-                        </div>
-                      ))}
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* Booking Form */}
         <section className="py-20 bg-background">
@@ -329,7 +243,7 @@ Looking forward to capturing your special moments!`;
                 {
                   step: '02',
                   title: 'Consultation Call',
-                  description: 'We\'ll have a detailed discussion about your vision, requirements, and create a custom package.',
+                  description: 'We\'ll have a detailed discussion about your vision, requirements, and create a custom solution.',
                   icon: Camera
                 },
                 {

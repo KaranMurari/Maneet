@@ -22,7 +22,7 @@ const Services = () => {
       description: 'Complete wedding day coverage with artistic storytelling, candid moments, and traditional ceremonies. Includes pre-wedding consultation, full day coverage, and edited gallery.',
       icon: Heart,
       features: ['Full Day Coverage', 'Candid & Posed Shots', 'Traditional Ceremonies', 'Edited Gallery'],
-      startingPrice: 'Starting from ₹25,000'
+      
     },
     {
       id: 'pre-wedding-shoot',
@@ -30,7 +30,7 @@ const Services = () => {
       description: 'Romantic couple sessions in beautiful locations. Perfect for save-the-date cards, wedding invitations, or simply celebrating your love story.',
       icon: Camera,
       features: ['2-3 Hour Session', 'Multiple Outfits', 'Location Scouting', 'High-Res Images'],
-      startingPrice: 'Starting from ₹15,000'
+      
     },
     {
       id: 'destination-weddings',
@@ -38,7 +38,7 @@ const Services = () => {
       description: 'Stunning coverage for weddings in exotic locations. We travel with you to capture your special day against breathtaking backdrops.',
       icon: Plane,
       features: ['Travel Coverage', 'Multi-Day Events', 'Local Coordination', 'Drone Photography'],
-      startingPrice: 'Contact for Quote'
+      
     },
     {
       id: 'event-photography',
@@ -46,7 +46,7 @@ const Services = () => {
       description: 'Professional coverage for birthdays, anniversaries, celebrations, and special occasions. Capturing joy and creating lasting memories.',
       icon: Calendar,
       features: ['Event Coverage', 'Group Photos', 'Candid Moments', 'Quick Turnaround'],
-      startingPrice: 'Starting from ₹8,000'
+      
     },
     {
       id: 'corporate-shoots',
@@ -54,7 +54,7 @@ const Services = () => {
       description: 'Business portraits, company events, team photos, and corporate headshots. Professional images for your business needs.',
       icon: Building,
       features: ['Business Portraits', 'Team Photos', 'Event Coverage', 'Brand Photography'],
-      startingPrice: 'Starting from ₹5,000'
+      
     },
     {
       id: 'maternity-baby',
@@ -62,7 +62,7 @@ const Services = () => {
       description: 'Tender moments of growing families. Maternity sessions and newborn photography handled with care and creativity.',
       icon: Baby,
       features: ['Maternity Sessions', 'Newborn Photos', 'Family Portraits', 'Safe Environment'],
-      startingPrice: 'Starting from ₹6,000'
+      
     },
     {
       id: 'drone-photography',
@@ -70,7 +70,7 @@ const Services = () => {
       description: 'Aerial perspectives that add a unique dimension to your photography. Perfect for weddings, events, and landscape shots.',
       icon: Zap,
       features: ['Aerial Views', 'Landscape Shots', 'Event Coverage', 'High Resolution'],
-      startingPrice: 'Starting from ₹10,000'
+      
     },
     {
       id: 'group-photography',
@@ -78,15 +78,15 @@ const Services = () => {
       description: 'Family reunions, group celebrations, and large gatherings. Coordinated sessions to capture everyone at their best.',
       icon: Users,
       features: ['Large Groups', 'Family Reunions', 'Coordinated Poses', 'Multiple Shots'],
-      startingPrice: 'Starting from ₹7,000'
+      
     },
   ];
 
   return (
     <Layout
       title="Photography Services - Wedding, Pre-Wedding & Event Photography | Maneet Sharma"
-      description="Professional photography services in Uttarakhand including wedding photography, pre-wedding shoots, corporate events, maternity photography and more. Contact for custom packages."
-      keywords="Wedding Photography Services, Pre Wedding Shoot Packages, Event Photography Uttarakhand, Corporate Photography, Maternity Photography, Drone Photography Services"
+      description="Professional photography services in Uttarakhand including wedding photography, pre-wedding shoots, corporate events, maternity photography and more. Contact for custom solutions."
+      keywords="Wedding Photography Services, Pre Wedding Shoot Services, Event Photography Uttarakhand, Corporate Photography, Maternity Photography, Drone Photography Services"
     >
       <div className="pt-20">
         {/* Hero Section */}
@@ -147,15 +147,12 @@ const Services = () => {
                       </div>
                       
                       <div className="border-t border-border pt-6">
-                        <p className="font-semibold text-primary text-center mb-4">
-                          {service.startingPrice}
-                        </p>
                         <div className="space-y-3">
                           <Button variant="luxury" size="default" className="w-full" asChild>
                             <Link to={`/services/${service.id}`}>Learn More</Link>
                           </Button>
                           <Button variant="outline" size="default" className="w-full" asChild>
-                            <Link to="/book-now">Book Now</Link>
+                            <Link to="/contact">Inquire for Pricing & Availability</Link>
                           </Button>
                         </div>
                       </div>
@@ -181,7 +178,7 @@ const Services = () => {
                 Ready to Book Your Session?
               </h2>
               <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-                Let's discuss your vision and create a custom package that perfectly fits your needs and budget.
+                Let's discuss your vision and create a custom solution that perfectly fits your needs.
               </p>
               <div className="space-x-4">
                 <Button variant="hero" size="xl" asChild>

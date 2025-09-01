@@ -75,7 +75,7 @@ Message: ${formData.message}`;
   return (
     <Layout
       title="Contact Maneet Sharma Photography - Book Your Session Today"
-      description="Get in touch with Maneet Sharma Photography for wedding photography, pre-wedding shoots, and event coverage in Uttarakhand. Contact us for custom packages and bookings."
+      description="Get in touch with Maneet Sharma Photography for wedding photography, pre-wedding shoots, and event coverage in Uttarakhand. Contact us for custom solutions and bookings."
       keywords="Contact Photography Services, Book Wedding Photographer, Photography Booking Uttarakhand, Maneet Sharma Contact, Photography Consultation"
     >
       <div className="pt-20">
@@ -93,7 +93,7 @@ Message: ${formData.message}`;
               </h1>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                 Ready to capture your special moments? Get in touch to discuss your vision, 
-                explore our services, and create a custom package that's perfect for you.
+                explore our services, and create a custom solution that's perfect for you.
               </p>
             </motion.div>
           </div>
@@ -243,7 +243,7 @@ Message: ${formData.message}`;
                   <p className="text-lg text-muted-foreground leading-relaxed mb-6">
                     Every event is unique, and I believe your photography should reflect that. 
                     Whether you're planning an intimate ceremony or a grand celebration, I'm here 
-                    to listen to your ideas and create a custom package that fits your needs and budget.
+                    to listen to your ideas and create a custom solution that fits your needs perfectly.
                   </p>
                 </div>
 

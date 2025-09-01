@@ -46,7 +46,7 @@ const ServiceDetail = () => {
 
 We understand that every couple is unique, and we tailor our approach to reflect your personal style and vision. From the intimate getting-ready moments to the grand celebration, we ensure that every laugh, tear, and smile is beautifully preserved for generations to come.
 
-Our wedding photography package includes pre-wedding consultation, full day coverage from bridal preparation to reception, professional editing, and a curated online gallery that you can share with family and friends.`,
+Our wedding photography service includes pre-wedding consultation, full day coverage from bridal preparation to reception, professional editing, and a curated online gallery that you can share with family and friends.`,
       features: [
         'Full day coverage (8-12 hours)',
         'Pre-wedding consultation and planning',
@@ -68,14 +68,6 @@ Our wedding photography package includes pre-wedding consultation, full day cove
         'Gallery delivery within 4-6 weeks'
       ],
       gallery: [hero1, hero2, hero3],
-      pricing: {
-        starting: '₹25,000',
-        packages: [
-          { name: 'Essential', price: '₹25,000', hours: '6 hours', photos: '300+ edited photos' },
-          { name: 'Premium', price: '₹45,000', hours: '10 hours', photos: '500+ edited photos' },
-          { name: 'Luxury', price: '₹75,000', hours: '12 hours', photos: '800+ edited photos' }
-        ]
-      },
       testimonial: {
         text: "Maneet captured our wedding day so beautifully. Every emotion, every moment was perfectly preserved. We couldn't be happier with the results!",
         author: "Priya & Rohan",
@@ -114,14 +106,6 @@ These sessions also serve as a perfect opportunity for you to get comfortable wi
         'Gallery delivery within 2-3 weeks'
       ],
       gallery: [hero2, hero1, hero3],
-      pricing: {
-        starting: '₹15,000',
-        packages: [
-          { name: 'Classic', price: '₹15,000', hours: '2 hours', photos: '50+ edited photos' },
-          { name: 'Deluxe', price: '₹25,000', hours: '3 hours', photos: '80+ edited photos' },
-          { name: 'Premium', price: '₹35,000', hours: '4 hours', photos: '100+ edited photos' }
-        ]
-      },
       testimonial: {
         text: "Our pre-wedding shoot was magical! Maneet made us feel so comfortable and captured our love beautifully. The photos exceeded our expectations!",
         author: "Anita & Vikram",
@@ -160,14 +144,6 @@ We also provide drone photography where permitted, capturing aerial perspectives
         'Gallery delivery within 6-8 weeks'
       ],
       gallery: [hero3, hero1, hero2],
-      pricing: {
-        starting: 'Contact for Quote',
-        packages: [
-          { name: 'Weekend Package', price: 'From ₹80,000', days: '2-3 days', photos: 'Unlimited coverage' },
-          { name: 'Extended Package', price: 'From ₹1,20,000', days: '4-5 days', photos: 'Complete documentation' },
-          { name: 'Luxury Package', price: 'From ₹2,00,000', days: '5-7 days', photos: 'Premium coverage' }
-        ]
-      },
       testimonial: {
         text: "Maneet documented our Udaipur wedding beautifully! He captured not just our ceremonies but the essence of the location. Simply outstanding work!",
         author: "Kavya & Arjun",
@@ -206,14 +182,6 @@ From intimate family gatherings to large celebrations, we ensure comprehensive c
         'Gallery delivery within 2-3 weeks'
       ],
       gallery: [hero1, hero3, hero2],
-      pricing: {
-        starting: '₹8,000',
-        packages: [
-          { name: 'Basic', price: '₹8,000', hours: '3 hours', photos: '100+ edited photos' },
-          { name: 'Standard', price: '₹15,000', hours: '5 hours', photos: '200+ edited photos' },
-          { name: 'Premium', price: '₹25,000', hours: '8 hours', photos: '300+ edited photos' }
-        ]
-      },
       testimonial: {
         text: "Maneet captured my daughter's birthday party perfectly! He got all the candid moments and made everyone feel comfortable. Highly recommended!",
         author: "Meera Sharma",
@@ -252,14 +220,6 @@ Our corporate photography approach is efficient, professional, and minimally dis
         'Delivery in multiple formats'
       ],
       gallery: [hero2, hero3, hero1],
-      pricing: {
-        starting: '₹5,000',
-        packages: [
-          { name: 'Headshots', price: '₹5,000', duration: '1-2 hours', photos: '10-20 edited photos' },
-          { name: 'Team Photos', price: '₹12,000', duration: '2-3 hours', photos: '50+ edited photos' },
-          { name: 'Event Coverage', price: '₹20,000', duration: '4-6 hours', photos: '200+ edited photos' }
-        ]
-      },
       testimonial: {
         text: "Professional and efficient! Maneet provided excellent corporate headshots that perfectly represent our brand. Great communication and quality work.",
         author: "Rajesh Kumar",
@@ -298,14 +258,6 @@ From the glowing beauty of pregnancy to the delicate features of newborns, we ca
         'Gallery delivery within 2-3 weeks'
       ],
       gallery: [hero3, hero2, hero1],
-      pricing: {
-        starting: '₹6,000',
-        packages: [
-          { name: 'Maternity', price: '₹6,000', duration: '1 hour', photos: '25+ edited photos' },
-          { name: 'Newborn', price: '₹8,000', duration: '2 hours', photos: '30+ edited photos' },
-          { name: 'Family Package', price: '₹12,000', duration: '2 hours', photos: '50+ edited photos' }
-        ]
-      },
       testimonial: {
         text: "Maneet was so gentle and patient with our newborn. The photos are absolutely beautiful and captured this special time perfectly. We're so grateful!",
         author: "Neha & Amit",
@@ -344,14 +296,6 @@ We operate all drone equipment in compliance with local regulations and safety g
         'Integration with event photography'
       ],
       gallery: [hero1, hero2, hero3],
-      pricing: {
-        starting: '₹10,000',
-        packages: [
-          { name: 'Basic Aerial', price: '₹10,000', duration: '30 minutes', photos: '20+ edited photos' },
-          { name: 'Extended Coverage', price: '₹18,000', duration: '1 hour', photos: '40+ edited photos' },
-          { name: 'Event Integration', price: '₹25,000', duration: '2 hours', photos: '60+ edited photos' }
-        ]
-      },
       testimonial: {
         text: "The drone shots of our wedding venue were absolutely stunning! Maneet captured perspectives we never imagined. Added so much value to our photo collection.",
         author: "Rahul & Shreya",
@@ -390,14 +334,6 @@ From intimate family gatherings to large corporate events, we ensure that every 
         'Group photo delivery and ordering'
       ],
       gallery: [hero2, hero1, hero3],
-      pricing: {
-        starting: '₹7,000',
-        packages: [
-          { name: 'Small Groups', price: '₹7,000', people: '10-20 people', photos: '15+ edited photos' },
-          { name: 'Medium Groups', price: '₹12,000', people: '20-50 people', photos: '25+ edited photos' },
-          { name: 'Large Groups', price: '₹20,000', people: '50+ people', photos: '40+ edited photos' }
-        ]
-      },
       testimonial: {
         text: "Organizing our family reunion photos was seamless with Maneet. He coordinated everything perfectly and made sure everyone looked great. Wonderful experience!",
         author: "The Gupta Family",
@@ -578,7 +514,7 @@ From intimate family gatherings to large corporate events, we ensure that every 
           </div>
         </section>
 
-        {/* Pricing Section */}
+        {/* Pricing Inquiry Section */}
         <section className="py-20 bg-background">
           <div className="container mx-auto px-4">
             <motion.div
@@ -586,61 +522,16 @@ From intimate family gatherings to large corporate events, we ensure that every 
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="text-center mb-12"
+              className="text-center"
             >
               <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Pricing Packages
+                Interested in This Service?
               </h2>
-              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                Choose the package that best fits your needs. All packages can be customized to your requirements.
+              <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
+                Every event is unique, and we create custom solutions tailored to your specific needs. Contact us for personalized consultation and availability.
               </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-              {service.pricing.packages.map((pkg, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <Card className={`h-full hover:shadow-lg transition-luxury border-0 elegant-shadow ${index === 1 ? 'ring-2 ring-primary' : ''}`}>
-                    <CardContent className="p-8 text-center">
-                      {index === 1 && (
-                        <Badge className="mb-4 bg-primary text-white">Most Popular</Badge>
-                      )}
-                      <h3 className="font-heading text-2xl font-bold text-foreground mb-4">
-                        {pkg.name}
-                      </h3>
-                      <div className="mb-6">
-                        <span className="text-4xl font-bold text-primary">{pkg.price}</span>
-                      </div>
-                      <div className="space-y-2 mb-8 text-muted-foreground">
-                        <p>{pkg.duration || pkg.hours || pkg.days || pkg.people}</p>
-                        <p>{pkg.photos}</p>
-                      </div>
-                      <Button variant={index === 1 ? "luxury" : "outline"} className="w-full" asChild>
-                        <Link to="/book-now">Select Package</Link>
-                      </Button>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              ))}
-            </div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mt-12"
-            >
-              <p className="text-muted-foreground mb-6">
-                Need a custom package? We're happy to create a solution that fits your specific requirements and budget.
-              </p>
-              <Button variant="outline" size="lg" asChild>
-                <Link to="/contact">Request Custom Quote</Link>
+              <Button variant="luxury" size="xl" asChild>
+                <Link to="/contact">Inquire for Pricing & Availability</Link>
               </Button>
             </motion.div>
           </div>
