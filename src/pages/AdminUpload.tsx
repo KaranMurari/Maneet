@@ -13,9 +13,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from '@/components/ui/alert-dialog';
 import { Upload, LogOut, Image, Trash2, Loader2 } from 'lucide-react';
 
+// Interface updated: 'title' property removed
 interface GalleryImage {
   id: string;
-  title: string;
   category: string;
   description: string | null;
   image_url: string;
@@ -24,7 +24,7 @@ interface GalleryImage {
 }
 
 const AdminUpload = () => {
-  const [title, setTitle] = useState('');
+  // State updated: 'title' state removed
   const [category, setCategory] = useState('');
   const [description, setDescription] = useState('');
   const [file, setFile] = useState<File | null>(null);
@@ -87,10 +87,11 @@ const AdminUpload = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!file || !title || !category) {
+    // Validation updated: 'title' check removed
+    if (!file || !category) {
       toast({
         title: "Missing Information",
-        description: "Please fill in all required fields and select an image.",
+        description: "Please select a category and an image.",
         variant: "destructive"
       });
       return;
@@ -118,11 +119,10 @@ const AdminUpload = () => {
         .from('gallery')
         .getPublicUrl(filePath);
 
-      // Save metadata to database
+      // Save metadata to database - 'title' property removed from insert object
       const { error: dbError } = await supabase
         .from('gallery')
         .insert({
-          title,
           category,
           description: description || null,
           image_url: publicUrl,
@@ -134,39 +134,39 @@ const AdminUpload = () => {
       }
 
       toast({
-        title: "Success!",
-        description: "Image uploaded successfully and will appear in the gallery."
+        title: "Success",
+        description: "Image uploaded and added to the gallery successfully.",
       });
 
-      // Reset form
-      setTitle('');
+      // Reset form state - setTitle removed
       setCategory('');
       setDescription('');
       setFile(null);
-      // Reset file input
-      const fileInput = document.getElementById('file') as HTMLInputElement;
-      if (fileInput) fileInput.value = '';
-
+      // Manually reset the file input visually
+      const fileInput = document.getElementById('image-upload') as HTMLInputElement;
+      if (fileInput) {
+        fileInput.value = '';
+      }
+      
       // Refresh gallery
       fetchGalleryImages();
 
     } catch (error) {
-      console.error('Upload error:', error);
+      console.error('Error uploading image:', error);
       toast({
-        title: "Upload Failed",
-        description: "There was an error uploading your image. Please try again.",
+        title: "Upload Error",
+        description: "Something went wrong during the upload. Please try again.",
         variant: "destructive"
       });
+    } finally {
+      setUploading(false);
     }
-
-    setUploading(false);
   };
-
+  
   const handleDelete = async (image: GalleryImage) => {
     setDeletingId(image.id);
-
     try {
-      // First delete the file from storage
+      // 1. Delete the file from storage
       const { error: storageError } = await supabase.storage
         .from('gallery')
         .remove([image.file_path]);
@@ -175,7 +175,7 @@ const AdminUpload = () => {
         throw storageError;
       }
 
-      // Then delete the record from database
+      // 2. Delete the record from the database
       const { error: dbError } = await supabase
         .from('gallery')
         .delete()
@@ -185,19 +185,19 @@ const AdminUpload = () => {
         throw dbError;
       }
 
-      // Update local state to remove the deleted image
-      setGalleryImages(prev => prev.filter(img => img.id !== image.id));
-
       toast({
-        title: "Success!",
-        description: "Image deleted successfully."
+        title: "Deleted",
+        description: "The image has been successfully deleted.",
       });
+      
+      // Update UI in real-time
+      setGalleryImages(galleryImages.filter(img => img.id !== image.id));
 
     } catch (error) {
-      console.error('Delete error:', error);
+      console.error('Error deleting image:', error);
       toast({
-        title: "Delete Failed",
-        description: "There was an error deleting the image. Please try again.",
+        title: "Deletion Error",
+        description: "Failed to delete the image. Please try again.",
         variant: "destructive"
       });
     } finally {
@@ -205,149 +205,99 @@ const AdminUpload = () => {
     }
   };
 
-  const handleSignOut = async () => {
-    await signOut();
-    navigate('/admin/login');
-  };
-
   return (
-    <div className="min-h-screen bg-muted/30 px-4 py-8">
-      <div className="container mx-auto max-w-6xl">
-        <div className="flex justify-between items-center mb-8">
-          <motion.h1
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            className="text-3xl font-heading font-bold"
-          >
-            Admin Upload Panel
-          </motion.h1>
-          <Button variant="outline" onClick={handleSignOut}>
-            <LogOut className="w-4 h-4 mr-2" />
-            Sign Out
-          </Button>
+    <div className="min-h-screen bg-background text-foreground">
+      <header className="sticky top-0 z-10 bg-background/80 backdrop-blur-sm border-b">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-16">
+            <h1 className="text-xl font-bold">Admin Dashboard</h1>
+            <Button variant="ghost" size="icon" onClick={signOut}>
+              <LogOut className="w-5 h-5" />
+              <span className="sr-only">Sign Out</span>
+            </Button>
+          </div>
         </div>
+      </header>
 
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.5 }}
+          className="grid grid-cols-1 lg:grid-cols-3 gap-8"
         >
-          <Card className="elegant-shadow">
+          <div className="lg:col-span-1">
+            <Card>
+              <CardHeader>
+                <CardTitle>Upload New Image</CardTitle>
+                <CardDescription>Add a new photo to your public gallery.</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  {/* Title Input Field has been completely removed from here */}
+
+                  <div className="space-y-2">
+                    <Label htmlFor="category">Category *</Label>
+                    <Select onValueChange={setCategory} value={category}>
+                      <SelectTrigger>
+                        <SelectValue placeholder="Select a category" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        {categories.map(cat => (
+                          <SelectItem key={cat} value={cat}>{cat}</SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="description">Description</Label>
+                    <Textarea
+                      id="description"
+                      placeholder="e.g., A beautiful moment from a wedding in Jim Corbett."
+                      value={description}
+                      onChange={(e) => setDescription(e.target.value)}
+                    />
+                  </div>
+                  
+                  <div className="space-y-2">
+                    <Label htmlFor="image-upload">Image File *</Label>
+                    <Input id="image-upload" type="file" onChange={handleFileChange} accept="image/png, image/jpeg, image/webp" />
+                    {file && <p className="text-sm text-muted-foreground mt-2">Selected: {file.name}</p>}
+                  </div>
+
+                  <Button type="submit" className="w-full" disabled={uploading}>
+                    {uploading ? (
+                      <>
+                        <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                        Uploading...
+                      </>
+                    ) : (
+                      <>
+                        <Upload className="w-4 h-4 mr-2" />
+                        Upload Image
+                      </>
+                    )}
+                  </Button>
+                </form>
+              </CardContent>
+            </Card>
+          </div>
+
+          <Card className="lg:col-span-2">
             <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <Image className="w-5 h-5" />
-                Upload New Gallery Image
-              </CardTitle>
-              <CardDescription>
-                Add a new image to the gallery with title, category, and optional description.
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="space-y-2">
-                  <Label htmlFor="title">Title *</Label>
-                  <Input
-                    id="title"
-                    type="text"
-                    placeholder="Enter image title"
-                    value={title}
-                    onChange={(e) => setTitle(e.target.value)}
-                    required
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="category">Category *</Label>
-                  <Select value={category} onValueChange={setCategory} required>
-                    <SelectTrigger>
-                      <SelectValue placeholder="Select a category" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      {categories.map((cat) => (
-                        <SelectItem key={cat} value={cat.toLowerCase()}>
-                          {cat}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="description">Description (Optional)</Label>
-                  <Textarea
-                    id="description"
-                    placeholder="Enter image description"
-                    value={description}
-                    onChange={(e) => setDescription(e.target.value)}
-                    rows={3}
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="file">Image File *</Label>
-                  <Input
-                    id="file"
-                    type="file"
-                    accept="image/*"
-                    onChange={handleFileChange}
-                    required
-                  />
-                  {file && (
-                    <p className="text-sm text-muted-foreground">
-                      Selected: {file.name}
-                    </p>
-                  )}
-                </div>
-
-                <Button 
-                  type="submit" 
-                  className="w-full" 
-                  disabled={uploading}
-                >
-                  {uploading ? (
-                    <>
-                      <Upload className="w-4 h-4 mr-2 animate-spin" />
-                      Uploading...
-                    </>
-                  ) : (
-                    <>
-                      <Upload className="w-4 h-4 mr-2" />
-                      Upload Image
-                    </>
-                  )}
-                </Button>
-              </form>
-            </CardContent>
-          </Card>
-        </motion.div>
-
-        {/* Gallery Management Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="mt-12"
-        >
-          <Card className="elegant-shadow">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <Image className="w-5 h-5" />
-                Gallery Management
-              </CardTitle>
-              <CardDescription>
-                View and manage existing gallery images. Click the delete button to permanently remove images.
-              </CardDescription>
+              <CardTitle>Manage Gallery</CardTitle>
+              <CardDescription>View and delete your uploaded images.</CardDescription>
             </CardHeader>
             <CardContent>
               {loadingGallery ? (
-                <div className="flex items-center justify-center py-12">
-                  <Loader2 className="w-8 h-8 animate-spin text-primary" />
-                  <span className="ml-2 text-muted-foreground">Loading gallery...</span>
+                <div className="flex justify-center items-center h-40">
+                  <Loader2 className="w-8 h-8 animate-spin text-muted-foreground" />
                 </div>
               ) : galleryImages.length === 0 ? (
-                <div className="text-center py-12">
-                  <Image className="w-16 h-16 mx-auto text-muted-foreground mb-4" />
-                  <p className="text-muted-foreground">No images in gallery yet.</p>
+                <div className="flex flex-col items-center justify-center text-center h-40 border-2 border-dashed rounded-lg">
+                  <Image className="w-12 h-12 text-muted-foreground" />
+                  <p className="mt-2 font-medium">No Images Found</p>
                   <p className="text-sm text-muted-foreground">Upload your first image above!</p>
                 </div>
               ) : (
@@ -357,13 +307,14 @@ const AdminUpload = () => {
                       <div className="aspect-square rounded-lg overflow-hidden bg-muted">
                         <img
                           src={image.image_url}
-                          alt={image.title}
+                          // Alt tag updated to use category instead of title
+                          alt={`Gallery image in ${image.category} category`}
                           className="w-full h-full object-cover transition-transform group-hover:scale-105"
                         />
                       </div>
                       <div className="mt-3 space-y-1">
-                        <h4 className="font-medium text-sm leading-tight">{image.title}</h4>
-                        <p className="text-xs text-muted-foreground capitalize">{image.category}</p>
+                        {/* Title display has been removed from here */}
+                        <p className="font-medium text-sm capitalize">{image.category}</p>
                         {image.description && (
                           <p className="text-xs text-muted-foreground line-clamp-2">{image.description}</p>
                         )}
