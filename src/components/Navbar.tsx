@@ -46,10 +46,10 @@ const Navbar = () => {
             <img 
               src="/lovable-uploads/bbf7d3bc-54d4-43e8-bcae-6d24e0c8fcc4.png" 
               alt="Maneet Sharma Photography Logo" 
-              className="w-5 h-5 sm:w-6 sm:h-6" 
+              className="w-8 h-8 sm:w-10 sm:h-10" 
             />
             <span className="hidden sm:block">Maneet Sharma Photography</span>
-            <span className="block sm:hidden">MSP</span>
+            <span className="block sm:hidden">Maneet Sharma Photography</span>
           </Link>
 
           {/* Desktop Navigation */}
