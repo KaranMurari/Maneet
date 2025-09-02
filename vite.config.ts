@@ -8,7 +8,7 @@ export default defineConfig({
     react(),
     sitemap({ 
       hostname: 'https://maneet.vercel.app',
-      robots: [{ userAgent: '*', allow: '/' }] // <-- ADD THIS LINE
+      robots: [{ userAgent: '*', allow: '/' }]
     }),
   ],
   resolve: {
