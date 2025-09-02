@@ -105,10 +105,12 @@ const AdminUpload = () => {
         .from('gallery')
         .getPublicUrl(filePath);
 
-      // Save metadata to database - 'category' property removed from insert object
+      // Save metadata to database
       const { error: dbError } = await supabase
         .from('gallery')
         .insert({
+          title: '',
+          category: 'general',
           description: description || null,
           image_url: publicUrl,
           file_path: filePath

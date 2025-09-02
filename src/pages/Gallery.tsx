@@ -164,7 +164,7 @@ const Gallery = () => {
             <div className="relative max-w-4xl max-h-full">
               <img
                 src={galleryImages[selectedImage].image_url}
-                alt={galleryImages[selectedImage].title}
+                alt={galleryImages[selectedImage].description || 'Maneet Sharma Photography gallery image'}
                 className="max-w-full max-h-full object-contain"
               />
               
@@ -193,8 +193,6 @@ const Gallery = () => {
               )}
               
               <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black/50 backdrop-blur-sm rounded-lg px-4 py-2 text-white text-center max-w-md">
-                <h3 className="font-medium mb-1">{galleryImages[selectedImage].title}</h3>
-                <p className="text-sm text-white/80 capitalize mb-1">{galleryImages[selectedImage].category.replace('-', ' ')}</p>
                 <p className="text-xs text-white/60">
                   {selectedImage + 1} / {galleryImages.length}
                 </p>

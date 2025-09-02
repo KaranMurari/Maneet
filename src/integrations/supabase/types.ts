@@ -16,33 +16,33 @@ export type Database = {
     Tables: {
       gallery: {
         Row: {
-          category: string
+          category: string | null
           created_at: string
           description: string | null
           file_path: string
           id: string
           image_url: string
-          title: string
+          title: string | null
           updated_at: string
         }
         Insert: {
-          category: string
+          category?: string | null
           created_at?: string
           description?: string | null
           file_path: string
           id?: string
           image_url: string
-          title: string
+          title?: string | null
           updated_at?: string
         }
         Update: {
-          category?: string
+          category?: string | null
           created_at?: string
           description?: string | null
           file_path?: string
           id?: string
           image_url?: string
-          title?: string
+          title?: string | null
           updated_at?: string
         }
         Relationships: []
