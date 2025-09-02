@@ -68,7 +68,7 @@ const Navbar = () => {
               </Link>
             ))}
             
-            <Button variant="hero" size="default" asChild>
+            <Button variant="hero" size="default" asChild  className="text-gray-800">
               <Link to="/book-now">Book Now</Link>
             </Button>
           </div>
