@@ -97,14 +97,12 @@ const Gallery = () => {
           </div>
         </section>
 
-        {/* Category Filter Section has been completely removed */}
-
         {/* Gallery Grid */}
         <section className="py-20 bg-muted/30">
           <div className="container mx-auto px-4">
             {loading ? (
               <div className="text-center">
-                <p>Loading images...</p> {/* Or a spinner component */}
+                <p>Loading images...</p> {/* You can add a spinner component here */}
               </div>
             ) : (
               <motion.div
@@ -170,7 +168,6 @@ const Gallery = () => {
                 className="max-w-full max-h-full object-contain"
               />
               
-              {/* Close Button */}
               <button
                 onClick={closeLightbox}
                 className="absolute top-4 right-4 w-10 h-10 rounded-full bg-black/50 backdrop-blur-sm flex items-center justify-center text-white hover:bg-black/70 transition-luxury"
@@ -178,27 +175,23 @@ const Gallery = () => {
                 <X className="w-6 h-6" />
               </button>
               
-              {/* Previous Button */}
               {galleryImages.length > 1 && (
-                <button
-                  onClick={prevImage}
-                  className="absolute left-4 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full bg-black/50 backdrop-blur-sm flex items-center justify-center text-white hover:bg-black/70 transition-luxury"
-                >
-                  <ChevronLeft className="w-6 h-6" />
-                </button>
+                <>
+                  <button
+                    onClick={prevImage}
+                    className="absolute left-4 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full bg-black/50 backdrop-blur-sm flex items-center justify-center text-white hover:bg-black/70 transition-luxury"
+                  >
+                    <ChevronLeft className="w-6 h-6" />
+                  </button>
+                  <button
+                    onClick={nextImage}
+                    className="absolute right-4 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full bg-black/50 backdrop-blur-sm flex items-center justify-center text-white hover:bg-black/70 transition-luxury"
+                  >
+                    <ChevronRight className="w-6 h-6" />
+                  </button>
+                </>
               )}
               
-              {/* Next Button */}
-              {galleryImages.length > 1 && (
-                <button
-                  onClick={nextImage}
-                  className="absolute right-4 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full bg-black/50 backdrop-blur-sm flex items-center justify-center text-white hover:bg-black/70 transition-luxury"
-                >
-                  <ChevronRight className="w-6 h-6" />
-                </button>
-              )}
-              
-              {/* Image Info */}
               <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black/50 backdrop-blur-sm rounded-lg px-4 py-2 text-white text-center max-w-md">
                 <h3 className="font-medium mb-1">{galleryImages[selectedImage].title}</h3>
                 <p className="text-sm text-white/80 capitalize mb-1">{galleryImages[selectedImage].category.replace('-', ' ')}</p>
