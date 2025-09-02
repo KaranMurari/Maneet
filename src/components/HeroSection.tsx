@@ -80,7 +80,7 @@ const HeroSection = () => {
               <Button 
                 asChild
                 // Directly apply a clear, contrasting background and text color
-                className="bg-primary text-primary-foreground hover:bg-primary/90 transition-colors duration-300 shadow-lg hover:shadow-xl"
+                className="bg-primary text-gray-800 hover:bg-primary/90 transition-colors duration-300 shadow-lg hover:shadow-xl"
                 size="xl"
               >
                 <Link to="/book-now">Book Your Shoot</Link>
